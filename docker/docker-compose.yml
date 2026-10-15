@@ -1,0 +1,70 @@
+# AI Assistant Management Platform — local infrastructure (Lab 0)
+# Start:   docker compose -f docker/docker-compose.yml up -d
+# Status:  docker compose -f docker/docker-compose.yml ps
+# Tip: after the first successful pull, pin every ":latest" tag to the exact version you pulled.
+name: assistant-lab
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: lab_pwd
+      POSTGRES_DB: assistant
+    ports: ["5432:5432"]
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d:ro      # runs 01_, 02_, 03_ scripts on FIRST start only
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lab -d assistant"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports: ["6379:6379"]
+    volumes: [redis_data:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    environment:
+      RABBITMQ_DEFAULT_USER: lab
+      RABBITMQ_DEFAULT_PASS: lab_pwd
+    ports: ["5672:5672", "15672:15672"]      # 15672 = management UI
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      retries: 10
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports: ["6333:6333", "6334:6334"]        # 6333 REST + dashboard, 6334 gRPC (.NET client)
+    volumes: [qdrant_data:/qdrant/storage]
+
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["11434:11434"]
+    environment:
+      OLLAMA_CONTEXT_LENGTH: "8192"           # default is too small for system prompt + tools + history
+      OLLAMA_KEEP_ALIVE: "30m"                # keep the model in RAM between messages
+    volumes: [ollama_models:/root/.ollama]
+    # NVIDIA GPU (optional) — uncomment:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    ports: ["6006:6006", "4317:4317"]        # 6006 UI, 4317 OTLP gRPC
+
+volumes:
+  pg_data:
+  redis_data:
+  qdrant_data:
+  ollama_models:

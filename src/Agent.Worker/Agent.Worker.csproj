@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assistant.Core\Assistant.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.*" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.*" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.*" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.*" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.*" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.*" />
+  </ItemGroup>
+
+  <!-- PromptLibrary loads prompts/**/*.md from the output folder -->
+  <ItemGroup>
+    <None Include="..\..\prompts\**\*.md" LinkBase="prompts" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

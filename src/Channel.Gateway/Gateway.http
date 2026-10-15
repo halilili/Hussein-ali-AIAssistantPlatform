@@ -1,0 +1,42 @@
+### Labs 2-5: talk to the assistant through the simulator
+@base = http://localhost:5200
+@tenant = clinic-haddad
+@phone = 96170123456
+
+### Send a patient message
+POST {{base}}/simulator/{{tenant}}/messages
+Content-Type: application/json
+
+{ "from": "{{phone}}", "text": "marhaba, baddi maw3ad 3end Dr Haddad bukra" }
+
+### Read the conversation (poll after a few seconds — CPU inference is slow)
+GET {{base}}/simulator/{{tenant}}/conversations/{{phone}}
+
+### Reset the conversation
+DELETE {{base}}/simulator/{{tenant}}/conversations/{{phone}}
+
+### Real WhatsApp payload shape (useful to test the webhook path locally)
+POST {{base}}/webhooks/whatsapp
+Content-Type: application/json
+
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+    "id": "WABA_ID",
+    "changes": [{
+      "field": "messages",
+      "value": {
+        "messaging_product": "whatsapp",
+        "metadata": { "display_phone_number": "9611000001", "phone_number_id": "100000000000001" },
+        "contacts": [{ "profile": { "name": "Maya" }, "wa_id": "96170123456" }],
+        "messages": [{
+          "from": "96170123456",
+          "id": "wamid.TEST0001",
+          "timestamp": "1760450000",
+          "type": "text",
+          "text": { "body": "Hello, what are your opening hours?" }
+        }]
+      }
+    }]
+  }]
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net9.0": {
+      "Dapper": {
+        "type": "Direct",
+        "requested": "[2.*, )",
+        "resolved": "2.1.89",
+        "contentHash": "1VjFE664wnxvuhlgP8kS4PeFFF4jqD3VkbIHW6Zlc52zuibgcz5ICnIHcQXlTp6pURpPNGLV0ZpNe5x9KePJnA=="
+      },
+      "Microsoft.AspNetCore.OpenApi": {
+        "type": "Direct",
+        "requested": "[9.*, )",
+        "resolved": "9.0.21",
+        "contentHash": "UNKsxZ1NEkYXnAWyig/12o23nh4eq51/Ax9jP0VI4fk2ENV4nvDG184Yaf9/NycWW2beW1Oc/7kjiXmfuyDdHg==",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.31"
+        }
+      },
+      "Npgsql": {
+        "type": "Direct",
+        "requested": "[*, )",
+        "resolved": "10.0.3",
+        "contentHash": "7nb5YzXuvWWJxB0J8DiyL3we+X4FOctZrt0fIBnucOIaIevFEEwGQVZKtiu9olXdlNAK1eNgqSral6r/jlhI4w==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0"
+        }
+      },
+      "Scalar.AspNetCore": {
+        "type": "Direct",
+        "requested": "[*, )",
+        "resolved": "2.18.0",
+        "contentHash": "wwI3khcYNM7oL6axr4a41G29fJYOS3ckusgYZ4NiIccL8Amh2LOeu4HSK1SrQWiMJNrgoFqyWfDkOkunQCiRDw=="
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg=="
+      },
+      "Microsoft.Extensions.Logging.Abstractions": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "g0UfujELzlLbHoVG8kPKVBaW470Ewi+jnptGS9KUi6jcb+k2StujtK3m26DFSGGwQ/+bVgZfsWqNzlP6YOejvw==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        }
+      },
+      "Microsoft.OpenApi": {
+        "type": "Transitive",
+        "resolved": "1.6.31",
+        "contentHash": "58ggc22i0BKvHuVoj5oVVQ7EbMkEMY0FvGeoQ/yBemk36pUbroDoj1XxRTnCi+fsgDTDuf+YZmigHkEzs5B2wA=="
+      }
+    }
+  }
+}

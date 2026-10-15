@@ -1,0 +1,14 @@
+<Project>
+  <!-- Applies to every project under the repository root -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <!-- Lock exact package versions after the first restore; commit packages.lock.json -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- Semantic Kernel experimental APIs used in later labs -->
+    <NoWarn>$(NoWarn);SKEXP0001;SKEXP0010</NoWarn>
+  </PropertyGroup>
+</Project>

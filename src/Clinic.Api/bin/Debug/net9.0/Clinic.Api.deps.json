@@ -1,0 +1,107 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Clinic.Api/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.89",
+          "Microsoft.AspNetCore.OpenApi": "9.0.21",
+          "Npgsql": "10.0.3",
+          "Scalar.AspNetCore": "2.18.0"
+        },
+        "runtime": {
+          "Clinic.Api.dll": {}
+        }
+      },
+      "Dapper/2.1.89": {
+        "runtime": {
+          "lib/net8.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.89.60231"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.21": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.31"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "9.0.21.0",
+            "fileVersion": "9.0.2126.50509"
+          }
+        }
+      },
+      "Microsoft.OpenApi/1.6.31": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.31.0",
+            "fileVersion": "1.6.31.0"
+          }
+        }
+      },
+      "Npgsql/10.0.3": {
+        "runtime": {
+          "lib/net9.0/Npgsql.dll": {
+            "assemblyVersion": "10.0.3.0",
+            "fileVersion": "10.0.3.0"
+          }
+        }
+      },
+      "Scalar.AspNetCore/2.18.0": {
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "assemblyVersion": "2.18.0.0",
+            "fileVersion": "2.18.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Clinic.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dapper/2.1.89": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1VjFE664wnxvuhlgP8kS4PeFFF4jqD3VkbIHW6Zlc52zuibgcz5ICnIHcQXlTp6pURpPNGLV0ZpNe5x9KePJnA==",
+      "path": "dapper/2.1.89",
+      "hashPath": "dapper.2.1.89.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UNKsxZ1NEkYXnAWyig/12o23nh4eq51/Ax9jP0VI4fk2ENV4nvDG184Yaf9/NycWW2beW1Oc/7kjiXmfuyDdHg==",
+      "path": "microsoft.aspnetcore.openapi/9.0.21",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.21.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.6.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-58ggc22i0BKvHuVoj5oVVQ7EbMkEMY0FvGeoQ/yBemk36pUbroDoj1XxRTnCi+fsgDTDuf+YZmigHkEzs5B2wA==",
+      "path": "microsoft.openapi/1.6.31",
+      "hashPath": "microsoft.openapi.1.6.31.nupkg.sha512"
+    },
+    "Npgsql/10.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7nb5YzXuvWWJxB0J8DiyL3we+X4FOctZrt0fIBnucOIaIevFEEwGQVZKtiu9olXdlNAK1eNgqSral6r/jlhI4w==",
+      "path": "npgsql/10.0.3",
+      "hashPath": "npgsql.10.0.3.nupkg.sha512"
+    },
+    "Scalar.AspNetCore/2.18.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wwI3khcYNM7oL6axr4a41G29fJYOS3ckusgYZ4NiIccL8Amh2LOeu4HSK1SrQWiMJNrgoFqyWfDkOkunQCiRDw==",
+      "path": "scalar.aspnetcore/2.18.0",
+      "hashPath": "scalar.aspnetcore.2.18.0.nupkg.sha512"
+    }
+  }
+}

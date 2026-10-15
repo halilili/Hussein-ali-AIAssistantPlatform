@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Channel.Gateway": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64291;http://localhost:64292"
+    }
+  }
+}

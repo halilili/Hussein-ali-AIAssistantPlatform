@@ -1,0 +1,143 @@
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\appsettings.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.staticwebassets.endpoints.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.exe
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.deps.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.runtimeconfig.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Dapper.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Google.Protobuf.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Core.Api.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Net.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Net.Common.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Npgsql.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\OpenAI.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Qdrant.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\StackExchange.Redis.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.ClientModel.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.IO.Pipelines.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Memory.Data.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Net.ServerSentEvents.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Text.Json.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Contracts.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Core.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Core.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Contracts.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.csproj.AssemblyReference.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.AssemblyInfoInputs.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.AssemblyInfo.cs
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.csproj.CoreCompileInputs.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\scopedcss\bundle\Channel.Gateway.styles.css
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.development.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\swae.build.ex.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel..101D7CB4.Up2Date
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\refint\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.genruntimeconfig.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\ref\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\appsettings.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.staticwebassets.endpoints.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.exe
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.deps.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.runtimeconfig.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Channel.Gateway.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Dapper.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Google.Protobuf.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Core.Api.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Net.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Grpc.Net.Common.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Npgsql.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\OpenAI.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Qdrant.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\StackExchange.Redis.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.ClientModel.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.IO.Pipelines.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Memory.Data.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Net.ServerSentEvents.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\System.Text.Json.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encodings.Web.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Contracts.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Core.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Core.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\bin\Debug\net9.0\Assistant.Contracts.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.csproj.AssemblyReference.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.AssemblyInfoInputs.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.AssemblyInfo.cs
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.csproj.CoreCompileInputs.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.sourcelink.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\scopedcss\bundle\Channel.Gateway.styles.css
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.development.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\swae.build.ex.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel..101D7CB4.Up2Date
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\refint\Channel.Gateway.dll
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.pdb
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\Channel.Gateway.genruntimeconfig.cache
+C:\WorkSpace\me-private-zaynab-courses-ai\AI\AI Implementation\AssistantPlatform-lab 0-5-net9\AssistantPlatform\src\Channel.Gateway\obj\Debug\net9.0\ref\Channel.Gateway.dll

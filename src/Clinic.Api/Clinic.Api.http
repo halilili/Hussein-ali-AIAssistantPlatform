@@ -1,0 +1,37 @@
+### Lab 1 smoke tests — open in VS / VS Code (REST Client) / Rider
+@base = http://localhost:5100
+@tenant = clinic-haddad
+
+### Doctors
+GET {{base}}/tenants/{{tenant}}/doctors
+
+### Free slots for Dr. Haddad (pick a weekday in the future)
+GET {{base}}/tenants/{{tenant}}/doctors/1/slots?date=2026-10-19
+
+### Book (copy a startsAt value exactly from the slots response)
+POST {{base}}/tenants/{{tenant}}/appointments
+Content-Type: application/json
+
+{
+  "doctorId": 1,
+  "startsAt": "2026-10-19T09:00:00+03:00",
+  "patientPhone": "96170123456",
+  "patientName": "Maya Test",
+  "reason": "Routine check-up"
+}
+
+### Same slot, other patient → expect 422 slot_not_available (already booked).
+# A 409 slot_taken only appears in a true race: two requests passing validation at the same instant.
+POST {{base}}/tenants/{{tenant}}/appointments
+Content-Type: application/json
+
+{
+  "doctorId": 1,
+  "startsAt": "2026-10-19T09:00:00+03:00",
+  "patientPhone": "96171999888",
+  "patientName": "Other Patient",
+  "reason": null
+}
+
+### Upcoming appointments for a phone
+GET {{base}}/tenants/{{tenant}}/appointments?phone=96170123456
