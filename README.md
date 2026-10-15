@@ -3,7 +3,7 @@
 Companion code for **Chapter 10** of *AI Agentic .NET Reference*. First vertical: a clinic's virtual
 secretary on WhatsApp (simulated), built on .NET 9, Semantic Kernel, Ollama, Qdrant, Redis, RabbitMQ and Postgres.
 
-## Run order
+## Run order read lab1-5-workflow for details info
 ```bash
 # Lab 0 — infrastructure
 docker compose -f docker/docker-compose.yml up -d
