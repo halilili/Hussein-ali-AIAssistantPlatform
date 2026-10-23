@@ -6,6 +6,17 @@ namespace Clinic.Api;
 /// <summary>Plain SQL via Dapper: the queries are the documentation of the business rules.</summary>
 public sealed class ClinicRepository(NpgsqlDataSource db)
 {
+    /// <summary>Active tenants (admin/testing endpoint; the Gateway resolves tenants from the WhatsApp number).</summary>
+    public async Task<IReadOnlyList<TenantDto>> GetTenantsAsync()
+    {
+        await using var c = await db.OpenConnectionAsync();
+        var rows = await c.QueryAsync<TenantDto>("""
+            SELECT id AS Id, display_name AS DisplayName, vertical AS Vertical, timezone AS TimeZone
+            FROM platform.tenants WHERE is_active ORDER BY id
+            """);
+        return rows.AsList();
+    }
+
     public async Task<string?> GetTimeZoneIdAsync(string tenantId)
     {
         await using var c = await db.OpenConnectionAsync();

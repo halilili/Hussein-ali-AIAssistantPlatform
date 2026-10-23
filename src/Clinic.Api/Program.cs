@@ -16,9 +16,15 @@ builder.Services.AddSingleton(TimeProvider.System);
 var app = builder.Build();
 app.MapOpenApi();                 // /openapi/v1.json
 app.MapScalarApiReference();      // /scalar  — interactive API explorer
-app.MapGet("/", () => Results.Redirect("/scalar")).ExcludeFromDescription();
+app.MapGet("/", () => Results.Redirect("/scalar")).ExcludeFromDescription();   // root → API explorer
+
 const int MaxUpcomingPerPatient = 2;                       // business rule: anti-spam / fairness
 var minCancellationNotice = TimeSpan.FromHours(2);         // business rule: matches knowledge/policies.md
+
+// Admin/testing: list tenants. In production this sits behind admin auth (Lab 16);
+// patients never send a tenant id — the Gateway resolves it from the receiving WhatsApp number.
+app.MapGet("/tenants", async (ClinicRepository repo) => Results.Ok(await repo.GetTenantsAsync()))
+   .WithTags("Tenants");
 
 var tenants = app.MapGroup("/tenants/{tenantId}").WithTags("Clinic");
 

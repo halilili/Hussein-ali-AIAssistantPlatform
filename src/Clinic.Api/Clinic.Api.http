@@ -2,6 +2,9 @@
 @base = http://localhost:5100
 @tenant = clinic-haddad
 
+### Tenants (find the tenantId)
+GET {{base}}/tenants
+
 ### Doctors
 GET {{base}}/tenants/{{tenant}}/doctors
 

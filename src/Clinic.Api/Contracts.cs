@@ -8,6 +8,8 @@ public sealed record WorkingHoursRow(int StartMinute, int EndMinute);
 public sealed record AppointmentRow(Guid Id, int DoctorId, string DoctorName, DateTime StartsAtUtc, string Status, string? Reason);
 
 // ---- API contracts ----
+public sealed record TenantDto(string Id, string DisplayName, string Vertical, string TimeZone);
+
 public sealed record SlotDto(DateTimeOffset StartsAt, DateTimeOffset EndsAt);
 
 public sealed record SlotsResponse(int DoctorId, DateOnly Date, string TimeZone, IReadOnlyList<SlotDto> Slots);
