@@ -1,0 +1,45 @@
+feat(lab0-5): tenants endpoint, VS launch profiles, bilingual RAG fixes
+
+Clinic.Api
+- Add GET /tenants (TenantDto + ClinicRepository.GetTenantsAsync).
+  Why: tenant ids were only discoverable via SQL; needed for testing and
+  the simulator. Admin-only in production (patients never send a tenant id;
+  the Gateway resolves it from the WhatsApp number).
+- Add Properties/launchSettings.json (launchUrl=scalar, port 5100) and
+  redirect "/" -> "/scalar".
+  Why: Visual Studio opened http://localhost:5100/ which has no page (404).
+
+Knowledge.Ingestion
+- Read --tenant/--path/--ask from the command line only.
+  Why: bug - IConfiguration also loads environment variables, so without
+  --path the Windows PATH variable was read as the folder
+  ("The filename, directory name, or volume label syntax is incorrect").
+- Force UTF-8 console output, print received-argument diagnostics and the
+  effective settings (Collection, TopK, MinScore).
+  Why: Arabic printed as "????" and it was unclear whether the argument
+  or only the display was broken, or whether --Knowledge:MinScore applied.
+- Add launch profiles: ingest, one "Ask" per test question (EN/AR/Arabizi/
+  FR/out-of-KB) and an "all scores" twin (--Knowledge:MinScore 0), with
+  workingDirectory = solution root.
+  Why: VS runs from bin\Debug, so relative knowledge/ paths failed, and
+  hand-editing quoted JSON arguments was error-prone.
+
+Knowledge base (knowledge/clinic-haddad/*.md)
+- Make all four documents bilingual: Arabic headings, Arabizi keywords,
+  Lebanese Arabic summary lines.
+  Why: measured retrieval - "قديش حق الإيكو؟" and "kam ha2 el echo?" scored
+  a flat 0.338-0.353 on unrelated chunks and missed "Test prices"; English
+  matched at 0.674. bge-m3 maps dialect/Arabizi poorly to an English-only KB.
+  Requires re-running "Ingest clinic-haddad".
+
+Agent.Worker
+- KnowledgePlugin: the LLM writes the search query IN ENGLISH (translating
+  from Arabic/Arabizi/French first).
+  Why: same measurement; English queries retrieve reliably. MinScore stays
+  0.45 - lowering it would answer a price question with opening hours.
+  Proper fix (query rewriting + hybrid search) is planned for Lab 7.
+
+Docs
+- documents/lab1-5-workflow.docx: Step 6 incidents (VS arguments/working
+  folder, PATH bug, Arabic display/JSON quoting, Arabic/Arabizi retrieval)
+  and incident-log rows; scores recorded as the Lab 7 baseline.

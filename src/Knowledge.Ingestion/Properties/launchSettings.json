@@ -6,14 +6,74 @@
       "commandLineArgs": "--tenant clinic-haddad --path knowledge/clinic-haddad",
       "workingDirectory": "$(ProjectDir)..\\.."
     },
-    "Ask clinic-haddad (test retrieval)": {
+    "Ask EN insurance": {
       "commandName": "Project",
       "commandLineArgs": "--tenant clinic-haddad --ask \"do you accept insurance?\"",
       "workingDirectory": "$(ProjectDir)..\\.."
     },
-    "Ingest + ask clinic-haddad": {
+    "Ask EN insurance — all scores": {
       "commandName": "Project",
-      "commandLineArgs": "--tenant clinic-haddad --path knowledge/clinic-haddad --ask \"where can I park?\"",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"do you accept insurance?\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask AR parking": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"في باركينغ؟\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask AR parking — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"في باركينغ؟\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask Arabizi echo price": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"kam ha2 el echo?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask Arabizi echo price — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"kam ha2 el echo?\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask AR echo price": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"قديش حق الإيكو؟\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask AR echo price — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"قديش حق الإيكو؟\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask EN echo price": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"how much is the echo?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask EN echo price — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"how much is the echo?\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask FR CNSS": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"est-ce que vous acceptez la CNSS ?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask FR CNSS — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"est-ce que vous acceptez la CNSS ?\" --Knowledge:MinScore 0",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask EN MRI (not in KB)": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"do you do MRI scans?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask EN MRI (not in KB) — all scores": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"do you do MRI scans?\" --Knowledge:MinScore 0",
       "workingDirectory": "$(ProjectDir)..\\.."
     }
   }
