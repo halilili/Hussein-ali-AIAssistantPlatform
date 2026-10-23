@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Ingest clinic-haddad": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --path knowledge/clinic-haddad",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ask clinic-haddad (test retrieval)": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --ask \"do you accept insurance?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "Ingest + ask clinic-haddad": {
+      "commandName": "Project",
+      "commandLineArgs": "--tenant clinic-haddad --path knowledge/clinic-haddad --ask \"where can I park?\"",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    }
+  }
+}
