@@ -16,7 +16,7 @@ builder.Services.AddSingleton(TimeProvider.System);
 var app = builder.Build();
 app.MapOpenApi();                 // /openapi/v1.json
 app.MapScalarApiReference();      // /scalar  — interactive API explorer
-
+app.MapGet("/", () => Results.Redirect("/scalar")).ExcludeFromDescription();
 const int MaxUpcomingPerPatient = 2;                       // business rule: anti-spam / fairness
 var minCancellationNotice = TimeSpan.FromHours(2);         // business rule: matches knowledge/policies.md
 

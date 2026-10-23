@@ -11,7 +11,7 @@ services:
       POSTGRES_USER: lab
       POSTGRES_PASSWORD: lab_pwd
       POSTGRES_DB: assistant
-    ports: ["5432:5432"]
+    ports: ["5433:5432"]
     volumes:
       - pg_data:/var/lib/postgresql/data
       - ./sql:/docker-entrypoint-initdb.d:ro      # runs 01_, 02_, 03_ scripts on FIRST start only

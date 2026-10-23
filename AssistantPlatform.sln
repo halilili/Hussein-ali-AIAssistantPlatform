@@ -27,7 +27,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\AI_Agentic_dotNET_Reference_withRAG-SAG-OptimizedCost_Ch10.docx = ..\..\AI_Agentic_dotNET_Reference_withRAG-SAG-OptimizedCost_Ch10.docx
-		..\..\lab1-5-workflow.docx = ..\..\lab1-5-workflow.docx
+		..\lab1-5-workflow.docx = ..\lab1-5-workflow.docx
 		..\..\..\..\..\..\Users\hussein.ali\Downloads\lab1-5-workflow.md = ..\..\..\..\..\..\Users\hussein.ali\Downloads\lab1-5-workflow.md
 	EndProjectSection
 EndProject

@@ -1,5 +1,63 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# ---- .NET build output ----
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+artifacts/
+publish/
 
-/.vs
+# ---- Compiled binaries anywhere in the repo ----
+*.dll
+*.exe
+*.pdb
+*.so
+*.dylib
+*.nupkg
+*.snupkg
+
+# ---- Visual Studio / Rider / VS Code ----
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+*.DotSettings.user
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# ---- NuGet ----
+# keep packages.lock.json (committed on purpose: reproducible restores)
+packages/
+*.nuget.props
+*.nuget.targets
+project.assets.json
+project.nuget.cache
+
+# ---- Tests & coverage ----
+[Tt]est[Rr]esult*/
+coverage*/
+*.coverage
+*.trx
+
+# ---- Logs & local data ----
+*.log
+logs/
+qdrant_storage/
+
+# ---- Secrets / local overrides (never commit real keys) ----
+appsettings.*.local.json
+*.env
+.env*
+secrets.json
+
+# ---- OS files ----
+Thumbs.db
+desktop.ini
+.DS_Store
