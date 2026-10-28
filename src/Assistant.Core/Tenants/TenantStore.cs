@@ -6,17 +6,25 @@ using Npgsql;
 namespace Assistant.Core.Tenants;
 
 /// <summary>A business subscribed to the platform (clinic, restaurant, pharmacy).</summary>
+/// <remarks>
+/// Languages arrive as a comma-separated string (SQL: array_to_string). Dapper reports a Postgres text[] column
+/// as System.Array, which matches no string[] constructor parameter ("A parameterless default constructor or one
+/// matching signature ... System.Array languages ... is required for Tenant materialization").
+/// </remarks>
 public sealed record Tenant(
     string Id,
     string DisplayName,
     string Vertical,
     string? WaPhoneNumberId,
     string TimeZoneId,
-    string[] Languages,
+    string LanguagesCsv,
     string PromptVersion,
     string SettingsJson)
 {
     private JsonElement? _settings;
+
+    public string[] Languages =>
+        LanguagesCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
     public TimeZoneInfo TimeZone => TimeZoneInfo.FindSystemTimeZoneById(TimeZoneId);
 
@@ -42,7 +50,7 @@ public sealed class TenantStore(NpgsqlDataSource db, IMemoryCache cache)
     private const string SelectColumns = """
         SELECT id AS Id, display_name AS DisplayName, vertical AS Vertical,
                wa_phone_number_id AS WaPhoneNumberId, timezone AS TimeZoneId,
-               languages AS Languages, prompt_version AS PromptVersion, settings::text AS SettingsJson
+               array_to_string(languages, ',') AS LanguagesCsv, prompt_version AS PromptVersion, settings::text AS SettingsJson
         FROM platform.tenants
         """;
 
