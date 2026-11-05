@@ -23,8 +23,17 @@ builder.Services.AddSingleton<BookingHoldService>();
 
 // ---- Business system client. Retries are DISABLED for POST: retrying a booking after a timeout
 //      could book twice (or fail on the slot we just took). GETs are retried.
+//      Timeouts: the defaults (10 s per attempt, 30 s total) are too tight when Ollama saturates the CPU on the same
+//      machine — a slots call took 87 s and the tool failed (incident, Step 9). Configurable via ClinicApi:TimeoutSeconds.
+var clinicTimeout = TimeSpan.FromSeconds(config.GetValue("ClinicApi:TimeoutSeconds", 90));
 builder.Services.AddHttpClient<ClinicApiClient>(c => c.BaseAddress = new Uri(config["ClinicApi:BaseUrl"]!))
-    .AddStandardResilienceHandler(o => o.Retry.DisableForUnsafeHttpMethods());
+    .AddStandardResilienceHandler(o =>
+    {
+        o.Retry.DisableForUnsafeHttpMethods();
+        o.AttemptTimeout.Timeout = clinicTimeout / 3;                 // e.g. 30 s per attempt
+        o.TotalRequestTimeout.Timeout = clinicTimeout;                // e.g. 90 s including retries
+        o.CircuitBreaker.SamplingDuration = clinicTimeout / 3 * 2;    // must be >= 2 x attempt timeout (options validation)
+    });
 
 // ---- Semantic Kernel: chat completion on the same OpenAI-compatible endpoint (Ollama by default)
 var llm = config.GetSection(LlmOptions.Section).Get<LlmOptions>() ?? new LlmOptions();
