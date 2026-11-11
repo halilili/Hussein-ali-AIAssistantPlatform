@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Assistant.Contracts;
 using Assistant.Core.Conversations;
 using MassTransit;
@@ -22,6 +23,9 @@ public sealed class InboundMessageConsumer(
     public async Task Consume(ConsumeContext<InboundMessage> context)
     {
         var m = context.Message;
+        var start = Stopwatch.GetTimestamp();
+        log.LogInformation("CONSUME agent-inbound {MessageId} {Tenant}/{From} via {Channel}: \"{Text}\"",
+            m.MessageId, m.TenantId, m.From, m.Channel, m.Text);
         string reply;
         try
         {
@@ -43,7 +47,10 @@ public sealed class InboundMessageConsumer(
             }
         }
 
-        await context.Publish(new OutboundMessage(
-            Guid.NewGuid(), m.MessageId, m.TenantId, m.Channel, m.From, reply, DateTimeOffset.UtcNow));
+        var outbound = new OutboundMessage(
+            Guid.NewGuid(), m.MessageId, m.TenantId, m.Channel, m.From, reply, DateTimeOffset.UtcNow);
+        await context.Publish(outbound);
+        log.LogInformation("PUBLISH OutboundMessage {OutId} (reply to {MessageId}) → gateway-outbound, {Ms:0} ms end-to-end in worker",
+            outbound.MessageId, m.MessageId, Stopwatch.GetElapsedTime(start).TotalMilliseconds);
     }
 }

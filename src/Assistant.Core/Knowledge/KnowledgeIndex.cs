@@ -1,6 +1,9 @@
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 using Assistant.Core.Llm;
+using Assistant.Logging;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Qdrant.Client;
 using Qdrant.Client.Grpc;
@@ -19,9 +22,11 @@ public sealed class KnowledgeIndex(
     QdrantClient qdrant,
     EmbeddingService embeddings,
     IOptions<KnowledgeOptions> knowledgeOptions,
-    IOptions<LlmOptions> llmOptions)
+    IOptions<LlmOptions> llmOptions,
+    ILoggerFactory loggers)
 {
     private readonly KnowledgeOptions _opt = knowledgeOptions.Value;
+    private readonly ILogger _log = loggers.CreateLogger(LogCategories.Llm + ".Rag");
 
     public async Task EnsureCollectionAsync(CancellationToken ct = default)
     {
@@ -62,6 +67,7 @@ public sealed class KnowledgeIndex(
 
     public async Task<IReadOnlyList<KnowledgeHit>> SearchAsync(string tenantId, string query, CancellationToken ct = default)
     {
+        var start = Stopwatch.GetTimestamp();
         var vector = await embeddings.EmbedAsync(query, ct);
         var hits = await qdrant.SearchAsync(
             _opt.Collection,
@@ -72,11 +78,17 @@ public sealed class KnowledgeIndex(
             scoreThreshold: _opt.MinScore,
             cancellationToken: ct);
 
-        return hits.Select(h => new KnowledgeHit(
+        var result = hits.Select(h => new KnowledgeHit(
             h.Payload["source"].StringValue,
             h.Payload["heading"].StringValue,
             h.Payload["text"].StringValue,
             h.Score)).ToList();
+
+        _log.LogInformation("RAG search tenant={Tenant} query=\"{Query}\" topK={TopK} minScore={MinScore} → {Hits} hit(s) [{Scores}] ({Ms:0} ms incl. embedding)",
+            tenantId, query, _opt.TopK, _opt.MinScore, result.Count,
+            string.Join(", ", result.Select(r => $"{r.Source}#{r.Heading}={r.Score:0.000}")),
+            Stopwatch.GetElapsedTime(start).TotalMilliseconds);
+        return result;
     }
 
     /// <summary>Same tenant+source+index always maps to the same point id → re-ingest overwrites, never duplicates.</summary>

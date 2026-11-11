@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Shared file logging for every host (Gateway, Worker, Clinic.Api). Serilog is Apache-2.0. -->
+  <ItemGroup>
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="*" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="*" />
+    <PackageReference Include="Serilog.Sinks.File" Version="*" />
+  </ItemGroup>
+
+</Project>

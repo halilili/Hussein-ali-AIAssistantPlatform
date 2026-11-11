@@ -17,12 +17,19 @@ public static class Simulator
     {
         var sim = app.MapGroup("/simulator/{tenantId}").WithTags("Simulator");
 
-        sim.MapPost("/messages", async (string tenantId, SimulatorMessage m, TenantStore tenants, IPublishEndpoint bus, CancellationToken ct) =>
+        sim.MapPost("/messages", async (string tenantId, SimulatorMessage m, TenantStore tenants, IPublishEndpoint bus,
+            ILoggerFactory lf, CancellationToken ct) =>
         {
-            if (await tenants.GetAsync(tenantId, ct) is null) return Results.NotFound();
+            var log = lf.CreateLogger("Channel.Gateway.Simulator");
+            if (await tenants.GetAsync(tenantId, ct) is null)
+            {
+                log.LogWarning("INBOUND rejected: unknown tenant {Tenant}", tenantId);
+                return Results.NotFound();
+            }
             var msg = new InboundMessage(Guid.NewGuid(), $"sim-{Guid.NewGuid():N}", tenantId, ChannelKind.Simulator,
                 m.From, m.Text, DateTimeOffset.UtcNow);
             await bus.Publish(msg, ct);
+            log.LogInformation("INBOUND sim {MessageId} {Tenant}/{From}: \"{Text}\" → published to agent-inbound", msg.MessageId, tenantId, m.From, m.Text);
             return Results.Accepted(value: new { msg.MessageId });
         });
 

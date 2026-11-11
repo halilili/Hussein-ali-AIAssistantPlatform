@@ -40,7 +40,7 @@ public static class WhatsAppWebhook
             HttpRequest req, IOptions<WhatsAppOptions> opt, TenantStore tenants,
             MessageDeduplicator dedup, IPublishEndpoint bus, ILoggerFactory lf, CancellationToken ct) =>
         {
-            var log = lf.CreateLogger("WhatsAppWebhook");
+            var log = lf.CreateLogger("Channel.Gateway.WhatsAppWebhook");
             using var reader = new StreamReader(req.Body, Encoding.UTF8);
             var body = await reader.ReadToEndAsync(ct);
 
@@ -67,9 +67,12 @@ public static class WhatsAppWebhook
                         ? m.GetProperty("text").GetProperty("body").GetString() ?? ""
                         : "[non-text message]";                                    // Lab 17: audio → STT, images
 
-                    await bus.Publish(new InboundMessage(
+                    var inbound = new InboundMessage(
                         Guid.NewGuid(), waMessageId, tenant.Id, ChannelKind.WhatsApp,
-                        m.GetProperty("from").GetString()!, text, DateTimeOffset.UtcNow), ct);
+                        m.GetProperty("from").GetString()!, text, DateTimeOffset.UtcNow);
+                    await bus.Publish(inbound, ct);
+                    log.LogInformation("INBOUND whatsapp {MessageId} ({WaId}) {Tenant}/{From}: \"{Text}\" → published to agent-inbound",
+                        inbound.MessageId, waMessageId, tenant.Id, inbound.From, text);
                 }
             }
             return Results.Ok();

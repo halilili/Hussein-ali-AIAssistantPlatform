@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Assistant.Contracts\Assistant.Contracts.csproj" />
+    <ProjectReference Include="..\Assistant.Logging\Assistant.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>

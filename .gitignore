@@ -61,3 +61,7 @@ secrets.json
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ---- Lab runtime logs (Assistant.Logging writes <repo>/logs/*.log) ----
+logs/
+*.log

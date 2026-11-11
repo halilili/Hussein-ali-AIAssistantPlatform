@@ -11,7 +11,7 @@ services:
       POSTGRES_USER: lab
       POSTGRES_PASSWORD: lab_pwd
       POSTGRES_DB: assistant
-    ports: ["5433:5432"]
+    ports: ["5433:5432"]                    # host 5433: avoids a native PostgreSQL on 5432 (incident Step 5)
     volumes:
       - pg_data:/var/lib/postgresql/data
       - ./sql:/docker-entrypoint-initdb.d:ro      # runs 01_, 02_, 03_ scripts on FIRST start only
@@ -23,7 +23,7 @@ services:
   redis:
     image: redis:7.4-alpine
     command: ["redis-server", "--appendonly", "yes"]
-    ports: ["6379:6379"]
+    ports: ["6380:6379"]                    # host 6380: avoids another Redis on 6379 (incident Step 9)
     volumes: [redis_data:/data]
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Agent.Worker.Booking;
 using Agent.Worker.Clients;
 using Agent.Worker.Plugins;
@@ -5,7 +6,10 @@ using Agent.Worker.Prompts;
 using Assistant.Contracts;
 using Assistant.Core.Conversations;
 using Assistant.Core.Knowledge;
+using Assistant.Core.Llm;
 using Assistant.Core.Tenants;
+using Assistant.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
@@ -26,8 +30,12 @@ public sealed class AssistantAgent(
     BookingHoldService holds,
     KnowledgeIndex knowledge,
     TimeProvider clock,
+    IOptions<LlmOptions> llmOptions,
+    ILoggerFactory loggers,
     ILogger<AssistantAgent> log) : IAssistantAgent
 {
+    private readonly ILogger _llmLog = loggers.CreateLogger(LogCategories.Llm + ".Chat");
+
     private const int HistoryTurns = 12;        // ~6 exchanges; Lab 6 replaces this with token-budgeted trimming + summary
 
     public async Task<string> HandleAsync(InboundMessage msg, CancellationToken ct)
@@ -69,8 +77,17 @@ public sealed class AssistantAgent(
             MaxTokens = 500
         };
         var chat = kernel.GetRequiredService<IChatCompletionService>();
+        _llmLog.LogInformation("LLM request model={Model} tenant={Tenant} from={From} prompt={Version}/{Hash} ({PromptChars} chars) history={Turns} msg(s) user=\"{Text}\"",
+            llmOptions.Value.ChatModel, tenant.Id, msg.From, prompt.Version, prompt.TemplateHash, prompt.Text.Length,
+            history.Count - 2, msg.Text);
+        var llmStart = Stopwatch.GetTimestamp();
         var result = await chat.GetChatMessageContentAsync(history, settings, kernel, ct);
         var reply = string.IsNullOrWhiteSpace(result.Content) ? FallbackReplies.TechnicalIssue : result.Content.Trim();
+        var tokens = result.Metadata is not null && result.Metadata.TryGetValue("Usage", out var u) && u is OpenAI.Chat.ChatTokenUsage usage
+            ? $"{usage.InputTokenCount} in / {usage.OutputTokenCount} out"
+            : "n/a";
+        _llmLog.LogInformation("LLM reply ({Ms:0} ms incl. tool calls, last call tokens {Tokens}) assistant=\"{Reply}\"",
+            Stopwatch.GetElapsedTime(llmStart).TotalMilliseconds, tokens, reply);
 
         // 5) Persist only the user text and the final answer (never tool payloads)
         await conversations.AppendAsync(tenant.Id, msg.From,

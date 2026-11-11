@@ -1,4 +1,5 @@
 using Assistant.Core;
+using Assistant.Logging;
 using Channel.Gateway;
 using MassTransit;
 
@@ -6,6 +7,9 @@ using MassTransit;
 // Job: receive (webhook/simulator) → validate → de-duplicate → publish to RabbitMQ → ACK fast.
 //      consume replies → deliver via the right channel.
 var builder = WebApplication.CreateBuilder(args);
+
+// File logging: <repo>/logs/all-, gateway-, redis-YYYYMMDD.log (see Assistant.Logging)
+builder.Services.AddLabLogging(builder.Configuration, "gateway", builder.Environment.ContentRootPath);
 
 builder.Services.AddAssistantCore(builder.Configuration);
 builder.Services.Configure<WhatsAppOptions>(builder.Configuration.GetSection(WhatsAppOptions.Section));

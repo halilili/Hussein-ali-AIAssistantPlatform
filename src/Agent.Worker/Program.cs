@@ -1,18 +1,25 @@
 using Agent.Worker.Agents;
 using Agent.Worker.Booking;
 using Agent.Worker.Clients;
+using Agent.Worker.Diagnostics;
 using Agent.Worker.Prompts;
 using Assistant.Contracts;
 using Assistant.Core;
 using Assistant.Core.Llm;
+using Assistant.Logging;
 using MassTransit;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.SemanticKernel;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-var builder = Host.CreateApplicationBuilder(args);
+// Agent.Worker is a web host since the diagnostics API was added (http://localhost:5300/diag).
+// Its main job is still the RabbitMQ consumer; the HTTP endpoints only test the dependencies and the flow.
+var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
+
+// ---- File logging: <repo>/logs/all-, worker-, redis-, llm-, clinic-YYYYMMDD.log (see Assistant.Logging)
+builder.Services.AddLabLogging(config, "worker", builder.Environment.ContentRootPath);
 
 // ---- Shared platform services (Postgres, Redis, tenants, conversations, Qdrant, embeddings)
 builder.Services.AddAssistantCore(config);
@@ -39,6 +46,7 @@ builder.Services.AddHttpClient<ClinicApiClient>(c => c.BaseAddress = new Uri(con
 var llm = config.GetSection(LlmOptions.Section).Get<LlmOptions>() ?? new LlmOptions();
 builder.Services.AddKernel()
     .AddOpenAIChatCompletion(llm.ChatModel, LlmClientFactory.Create(llm));
+builder.Services.AddSingleton<IFunctionInvocationFilter, ToolCallLoggingFilter>();   // every tool call → logs/llm-*.log
 
 // ---- The agent. Lab 2: EchoAgent. Lab 3+: AssistantAgent.
 // builder.Services.AddScoped<IAssistantAgent, EchoAgent>();
@@ -72,4 +80,11 @@ builder.Services.AddOpenTelemetry()
         .AddHttpClientInstrumentation()
         .AddOtlpExporter(o => o.Endpoint = new Uri(config["Otel:Endpoint"] ?? "http://localhost:4317")));
 
-builder.Build().Run();
+// ---- Diagnostics API (Redis, Postgres, RabbitMQ, Clinic.Api, Qdrant, LLM, end-to-end flow)
+builder.Services.AddHealthChecks();                 // MassTransit adds its bus/endpoint checks to this
+builder.Services.AddHttpClient("diag");             // Ollama /v1/models, RabbitMQ management API
+builder.Services.AddScoped<FlowTester>();
+
+var app = builder.Build();
+app.MapDiagnostics();
+app.Run();

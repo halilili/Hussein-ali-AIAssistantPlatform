@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <!-- Only the shared logging setup; the business system stays independent of the assistant platform (no Assistant.Core) -->
+  <ItemGroup>
+    <ProjectReference Include="..\Assistant.Logging\Assistant.Logging.csproj" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="*" />
     <PackageReference Include="Dapper" Version="2.*" />

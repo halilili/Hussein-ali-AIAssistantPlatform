@@ -19,11 +19,12 @@ public sealed class OutboundMessageConsumer(TenantStore tenants, WhatsAppSender 
                 var tenant = await tenants.GetAsync(m.TenantId, context.CancellationToken)
                              ?? throw new InvalidOperationException($"Unknown tenant {m.TenantId}");
                 await whatsApp.SendTextAsync(tenant.WaPhoneNumberId!, m.To, m.Text, context.CancellationToken);
+                log.LogInformation("OUTBOUND whatsapp {MessageId} (reply to {InReplyTo}) → {To} sent via Graph API", m.MessageId, m.InReplyTo, m.To);
                 break;
 
             case ChannelKind.Simulator:
                 // The reply is already in the Redis conversation; the simulator UI polls it.
-                log.LogInformation("[SIM {Tenant}] → {To}: {Text}", m.TenantId, m.To, m.Text);
+                log.LogInformation("OUTBOUND sim {MessageId} (reply to {InReplyTo}) {Tenant} → {To}: \"{Text}\"", m.MessageId, m.InReplyTo, m.TenantId, m.To, m.Text);
                 break;
 
             default:
