@@ -5,14 +5,16 @@
     <ProjectReference Include="..\Assistant.Logging\Assistant.Logging.csproj" />
   </ItemGroup>
 
+  <!-- .NET 9 edition: keep the Microsoft.Extensions family on 9.x. A 10.x package pulls System.Diagnostics.DiagnosticSource 10
+       into an ASP.NET Core 9 host → "Method not found: InstrumentAdvice`1.set_HistogramBucketBoundaries" at startup. -->
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="*" />
+    <PackageReference Include="Npgsql" Version="9.*" />
     <PackageReference Include="Dapper" Version="2.*" />
     <PackageReference Include="StackExchange.Redis" Version="2.*" />
     <PackageReference Include="Qdrant.Client" Version="1.*" />
     <PackageReference Include="OpenAI" Version="2.*" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.*" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.*" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.*" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.*" />
   </ItemGroup>
 
 </Project>

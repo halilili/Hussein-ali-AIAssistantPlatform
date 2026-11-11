@@ -8,8 +8,10 @@
     <ProjectReference Include="..\Assistant.Core\Assistant.Core.csproj" />
   </ItemGroup>
 
+  <!-- .NET 9 edition: keep the Microsoft.Extensions family on 9.x. A 10.x package pulls System.Diagnostics.DiagnosticSource 10
+       into an ASP.NET Core 9 host → "Method not found: InstrumentAdvice`1.set_HistogramBucketBoundaries" at startup. -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.*" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.*" />
   </ItemGroup>
 
 </Project>

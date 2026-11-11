@@ -5,13 +5,16 @@
     <ProjectReference Include="..\Assistant.Core\Assistant.Core.csproj" />
   </ItemGroup>
 
+  <!-- .NET 9 edition: telemetry/resilience packages pinned to their 9-era versions (Http.Resilience 9.*, OpenTelemetry 1.12.*).
+       With 10.x of these, the ASP.NET Core 9 worker crashed at startup: "Method not found: InstrumentAdvice`1.set_HistogramBucketBoundaries".
+       System.Diagnostics.DiagnosticSource itself may be 10 (OpenAI >= 2.14 and Semantic Kernel need it; Channel.Gateway runs fine with it). -->
   <ItemGroup>
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.*" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="8.*" />
-    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.*" />
-    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.*" />
-    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.*" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.*" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="9.*" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.12.*" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.*" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.12.*" />
   </ItemGroup>
 
   <!-- PromptLibrary loads prompts/**/*.md from the output folder -->

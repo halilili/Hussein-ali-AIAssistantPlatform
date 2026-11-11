@@ -175,8 +175,18 @@ public static class DiagnosticsEndpoints
             {
                 var ep = redis.GetEndPoints().First();
                 var server = redis.GetServer(ep);
-                var persistence = (await server.InfoAsync("persistence")).SelectMany(g => g).ToDictionary(kv => kv.Key, kv => kv.Value);
-                var loading = persistence.GetValueOrDefault("loading");
+                // INFO is an "admin" command for StackExchange.Redis (needs allowAdmin=true, which also enables FLUSHALL...).
+                // We don't enable admin mode for the app; without it the LOADING flag is simply reported as unknown.
+                string loading;
+                try
+                {
+                    var persistence = (await server.InfoAsync("persistence")).SelectMany(g => g).ToDictionary(kv => kv.Key, kv => kv.Value);
+                    loading = persistence.GetValueOrDefault("loading") ?? "?";
+                }
+                catch (RedisCommandException)
+                {
+                    loading = "unknown (INFO needs allowAdmin=true; ping + write below prove the server is serving)";
+                }
                 if (loading == "1") throw new InvalidOperationException("Redis is LOADING its dataset — wrong instance or still starting");
                 return new { endpoint = ep.ToString(), connected = redis.IsConnected, version = server.Version.ToString(), loading };
             }, portHint),

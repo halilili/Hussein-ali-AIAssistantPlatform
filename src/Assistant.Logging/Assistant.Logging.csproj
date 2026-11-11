@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <!-- Shared file logging for every host (Gateway, Worker, Clinic.Api). Serilog is Apache-2.0. -->
+  <!-- .NET 9 edition: keep the Microsoft.Extensions family on 9.x. A 10.x package pulls System.Diagnostics.DiagnosticSource 10
+       into an ASP.NET Core 9 host → "Method not found: InstrumentAdvice`1.set_HistogramBucketBoundaries" at startup. -->
   <ItemGroup>
-    <PackageReference Include="Serilog.Extensions.Hosting" Version="*" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="9.*" />
     <PackageReference Include="Serilog.Sinks.Console" Version="*" />
     <PackageReference Include="Serilog.Sinks.File" Version="*" />
   </ItemGroup>

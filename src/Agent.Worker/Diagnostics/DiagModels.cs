@@ -36,7 +36,8 @@ internal static class Diag
         var start = Stopwatch.GetTimestamp();
         try
         {
-            return new CheckResult(name, true, Ms(start), await body());
+            var details = await body();                          // await FIRST: arguments are evaluated left to right,
+            return new CheckResult(name, true, Ms(start), details);   // Ms(start) before the await always measured 0
         }
         catch (Exception ex)
         {
